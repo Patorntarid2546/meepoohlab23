@@ -1,3 +1,4 @@
+#include "lab23.h"
 // [Missing Code 1] Include header file.
   
 int main(){
@@ -9,18 +10,30 @@ int main(){
 	Unit hero("Hero",name);
 	
 	Equipment sword(0,8,4);
+	Equipment axes(0,16,-3);
+	Equipment shield(0,-1,7);
+	Equipment armor(25,-2,2);
+	
 	// [Missing Code 2]  Create Equipment axes, shield and armor here
 
-	
-	
 	char eq;	
 	cout << " [1] Sword \n [2] Axes \n [3] Shield \n [4] Armor \n";
 	cout << "Please selet your equipment: ";
 	cin >> eq;
+	
+	
+	if(eq == '1'){
+		hero.equip(&sword);
+	}else if(eq =='2'){
+		hero.equip(&axes);
+	}else if(eq == '3'){
+		hero.equip(&shield);
+	}else if(eq == '4'){
+		hero.equip(&armor);
+	}
+
 	// [Missing Code 3] Equip a selected equipment to the hero. 
 
-	
-	
 	Unit mons("Monster","Kraken");
 	
 	int turn_count = 1;
@@ -57,8 +70,18 @@ int main(){
 			cout << " [1] Sword \n [2] Axes \n [3] Shield \n [4] Armor \n";
 			cout << "Please select your equipment: ";
 			cin >> eq;
+			
 			// [Missing Code 3] Equip a selected equipment to the hero.
-
+			
+			if(eq == '1'){
+				hero.equip(&sword);
+			}else if(eq =='2'){
+				hero.equip(&axes);
+			}else if(eq == '3'){
+				hero.equip(&shield);
+			}else if(eq == '4'){
+				hero.equip(&armor);
+			}
 			
 		}
 		
